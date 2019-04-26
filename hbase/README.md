@@ -12,6 +12,15 @@ If started interactively will drop in to an HBase shell.
 ```
 docker run -ti harisekhon/hbase
 ```
+To access UI, make sure you port forward the container's port like this:
+```
+docker run -p 16010:16010 -p 16030:16030 --hostname sakthi-docker -it harisekhon/hbase
+```
+And add the following to /etc/hosts of the Docker host:
+```
+127.0.0.1       sakthi-docker
+```
+And access HBase from localhost:16010. You can change the ports as per your requirements.
 
 There are a lot of ports, so if you want to start the container and map all of them, use docker-compose:
 
