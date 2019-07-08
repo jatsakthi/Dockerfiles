@@ -13,6 +13,10 @@ docker run -p 16010:16010 -p 16030:16030 --hostname sakthi-docker -it jatsakthi/
 1. How to Build?
 ```
 docker build -t "hbase_docker:tag" .
+
+# To push to Docker Hub
+docker tag hbase_docker:pseudo jatsakthi/hbase_docker:pseudo
+git push jatsakthi/hbase_docker:pseudo
 ```
 
 2. How to Run?
@@ -22,7 +26,7 @@ Add the following to /etc/hosts of the Docker host:
 ```
 And then,
 ```
-docker run -p 16010:16010 -p 16030:16030 --hostname sakthi-docker -it hbase_docker:ps bash
+docker run -p 16010:16010 -p 16030:16030 --hostname sakthi-docker -it hbase_docker:pseudo bash
 root@sakthi-docker:~# ./startup.sh
 root@sakthi-docker:~# jps # To see the running java processes
 root@sakthi-docker:~# stop-hbase.sh # To stop HBase
