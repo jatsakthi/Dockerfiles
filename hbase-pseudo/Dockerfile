@@ -41,6 +41,7 @@ RUN cp -t /root/hadoop-3.0.2/etc/hadoop/ core-site.xml hadoop-env.sh hdfs-site.x
 # HBase
 RUN cp -t /root/hbase-3.0.0-SNAPSHOT/conf/ hbase-site.xml hbase-env.sh
 
-# Add Hadoop and HBase bin dirs to the path
+# Add Hadoop and HBase bin/sbin dirs to the path
 ENV PATH /root/hadoop-3.0.2/sbin:$PATH
+ENV PATH /root/hadoop-3.0.2/bin:$PATH
 ENV PATH /root/hbase-3.0.0-SNAPSHOT/bin:$PATH
