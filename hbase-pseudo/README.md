@@ -25,6 +25,7 @@ And then,
 docker run -p 16010:16010 -p 16030:16030 --hostname sakthi-docker -it hbase_docker:ps bash
 root@sakthi-docker:~# ./startup.sh
 root@sakthi-docker:~# jps # To see the running java processes
+root@sakthi-docker:~# stop-hbase.sh # To stop HBase
 ```
 And access HBase from localhost:16010. You can change the ports as per your requirements.
 
