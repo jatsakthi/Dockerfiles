@@ -16,7 +16,7 @@ docker build -t "hbase_docker:tag" .
 
 # To push to Docker Hub
 docker tag hbase_docker:pseudo jatsakthi/hbase_docker:pseudo
-git push jatsakthi/hbase_docker:pseudo
+docker push jatsakthi/hbase_docker:pseudo
 ```
 
 2. How to Run?
