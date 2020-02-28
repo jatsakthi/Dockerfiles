@@ -7,7 +7,7 @@ Apache HBase NoSQL columnar datastore
 
 Starts a single pseudo-distributed HBase cluster based on local install of HDFS
 ```
-docker run -p 16010:16010 -p 16030:16030 --hostname sakthi-docker -it jatsakthi/hbase_docker:pseudo bash
+docker run -p 16010:16010 -p 16030:16030 -p 9870:9870 --hostname sakthi-docker -it jatsakthi/hbase_docker:pseudo bash
 ```
 
 1. How to Build?
