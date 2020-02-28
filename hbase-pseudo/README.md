@@ -32,7 +32,11 @@ root@sakthi-docker:~# jps # To see the running java processes
 root@sakthi-docker:~# stop-hbase.sh # To stop HBase
 root@sakthi-docker:~# hdfs dfs -ls / # To check hdfs directory
 ```
-And access HBase from localhost:16010. You can change the ports as per your requirements.
+And access:
+* HBase from http://localhost:16010/
+* Hadoop from http://localhost:9870/
+
+You can change the ports as per your requirements.
 
 The HBase root dir: `hdfs://localhost:9000/hbase`
 The Zookeeper root dir: `/root/zookeeper`
