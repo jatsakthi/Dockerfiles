@@ -34,14 +34,15 @@ ENV PATH /usr/lib/jvm/java-8-openjdk-amd64/bin:$PATH
 
 # Copy jars and other files
 ADD data/* /root/
+# Don't bother unzipping the tarballs. It's somehow automatically done in docker
 
 # Hadoop
-RUN cp -t /root/hadoop-3.0.2/etc/hadoop/ core-site.xml hadoop-env.sh hdfs-site.xml
+RUN cp -t /root/hadoop-3.1.3/etc/hadoop/ core-site.xml hadoop-env.sh hdfs-site.xml
 
 # HBase
-RUN cp -t /root/hbase-3.0.0-SNAPSHOT/conf/ hbase-site.xml hbase-env.sh
+RUN cp -t /root/hbase-2.2.3/conf/ hbase-site.xml hbase-env.sh
 
-# Add Hadoop and HBase bin/sbin dirs to the path
-ENV PATH /root/hadoop-3.0.2/sbin:$PATH
-ENV PATH /root/hadoop-3.0.2/bin:$PATH
-ENV PATH /root/hbase-3.0.0-SNAPSHOT/bin:$PATH
+# Add Hadoop and HBase bin dirs to the path
+ENV PATH /root/hadoop-3.1.3/sbin:$PATH
+ENV PATH /root/hadoop-3.1.3/bin:$PATH
+ENV PATH /root/hbase-2.2.3/bin:$PATH
